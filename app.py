@@ -20,12 +20,12 @@ if not IMAGE_PATH.exists():
 # Running the model
 try:
     model = YOLO(str(MODEL_PATH)) 
-    print(f"✅ Modelo {MODEL_PATH.name} loaded succesfully.")
+    print(f"Modelo {MODEL_PATH.name} loaded succesfully.")
 except Exception as e:
     print(f"Error running YOLO model: {e}")
     sys.exit(1)
 
-print(f"🔍 Analysing image: {IMAGE_PATH.name}...")
+print(f"Analysing image: {IMAGE_PATH.name}...")
 
 # Executing prediction
 results = model.predict(
